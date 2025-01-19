@@ -21,6 +21,7 @@
         <input type="text" name="nota"> <br>
         digite a url da imagem da comida <br>
         <input type="text" name="imagem"> <br>
+        <input type="submit">
     </form>
     <?php 
     $nome = proteger_contra_xss_e_sql_injection($_GET['nome'] ?? '');
