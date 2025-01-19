@@ -13,10 +13,10 @@
     $id = $_GET['i'] ?? 1;
     $busca = $wikis->query("select * from comidas where id = '$id'");
     if (!$busca){
-        echo 'Error';
+        echo 'Error <br>';
     } else {
         if ($busca->num_rows == 0){
-            echo 'Não existe uma comida dessa no momento';
+            echo 'Não existe uma comida dessa no momento <br>';
         } else {
             while ($reg=$busca->fetch_object()){
                 echo "<img src='$reg->imagem' width='300'> <h1>$reg->nome</h1> Nota: $reg->nota/10.0 <hr> <p>$reg->descrição</p>";
